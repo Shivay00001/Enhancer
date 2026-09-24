@@ -5,6 +5,7 @@
 
 
 import { GoogleGenAI, Modality } from "@google/genai";
+import { getApiKey } from "./geminiConfig";
 
 const dataUrlToBase64 = (dataUrl: string): string => {
     const parts = dataUrl.split(',');
@@ -15,7 +16,7 @@ const dataUrlToBase64 = (dataUrl: string): string => {
 }
 
 export const serviceEnhance = async (croppedImageDataUrl: string, history: string[], hasFoundBanana:boolean): Promise<{ imageSrc: string, foundTheBanana: boolean }> => {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const base64Data = dataUrlToBase64(croppedImageDataUrl);
     const imagePart = {
         inlineData: {

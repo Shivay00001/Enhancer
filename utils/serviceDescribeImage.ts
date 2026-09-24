@@ -5,6 +5,7 @@
 
 
 import { GoogleGenAI } from "@google/genai";
+import { getApiKey } from "./geminiConfig";
 import { extractJson } from './extractJson';
 import type { ImageDescription } from '../types';
 
@@ -20,7 +21,7 @@ export const serviceDescribeImage = async (
     history: ImageDescription[],
     croppedSelectionDataUrl?: string
 ): Promise<ImageDescription> => {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const { mimeType, data: base64Data } = dataUrlToBlob(imageDataUrl);
 
     if (!base64Data) {

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import {GIFEncoder, quantize, applyPalette} from 'https://unpkg.com/gifenc'
+import {GIFEncoder, quantize, applyPalette} from 'gifenc'
 import type { Rect, HistoryStep } from '../types';
 
 // Easing function for smooth animation

@@ -1,5 +1,7 @@
 # Enhancer — AI image zoom & enhancement demo
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 A Google AI Studio-style demo that lets you zoom into an image, describe the
 selected region with Gemini, and generate an AI-upscaled/enhanced version
 (`gemini-2.5-flash-image`). Includes a playful "nano banana" 🍌 easter egg and
